@@ -8,4 +8,6 @@ route.post("/", auth, controller.addCategory);
 
 route.put("/add/:id", auth, controller.updateCategory);
 
+route.get("/", auth, controller.getList);
+
 module.exports = route;

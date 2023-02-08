@@ -18,3 +18,8 @@ exports.updateCategory = async (req, res) => {
     data = await Category.findById(id);
     res.json({ message: "update list", data });
 };
+
+exports.getList = async (req, res) => {
+    const data = await Category.find();
+    res.json({ message: "All categories", data });
+};
